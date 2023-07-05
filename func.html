@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+  <style>
+  body,html{
+    min-height:100vh;
+    margin:0;
+    padding:0px;
+    box-sizing:border-box;
+  }
+  h1{
+    color:teal;
+    text-align:center;
+    margin : 100px auto;
+  }
+  button{
+    width:100px;
+    margin:7px;
+    display:block;
+    color:#fff;
+    background:orange;
+    border:none;
+    padding:7px 1px ;
+    border-radius:5px;
+    font-style:italic;
+    display:inline;
+  }p{
+    font-size:20px;
+    text-align:center;
+    font-family:georgia;
+    color:#fece2f;
+  }
+  #div{
+    width:300px;
+    height:100px;
+    background:teal;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    margin:5% auto 22%;
+    border-radius:4px;
+  }
+  .js{
+    color:#fff;
+    font-family:elvetica;
+    margin:20px;
+    display:block;
+    text-align:center;
+    transform:translateX(0px);
+  }
+  .js:hover{
+     animation: anim .4s forwards;
+     transition:3s;
+  }
+  @keyframes anim {
+    0%{
+      transform:translateX(-10px);
+    }
+    20%{
+      transform:translateX(10px);
+    }
+    40%{
+      transform:translateX(-10px);
+    }
+    60%{
+      transform:translateX(10px);
+    }
+    80%{
+      transform:translateX(-10px);
+    }
+    100%{
+      transform:translateX(0px);
+      font-family:cursive;
+      font-size:35px;
+    }
+  }
+  b{
+    text-align:center;
+    display:block;
+    font-family:monospace;
+    font-style:italic;
+  }
+  b::before{
+    content:"";
+    width:50px;
+    height:17px;
+    background:teal;
+    display:block;
+    animation:forward 5s infinite;
+    transition:5s;
+  }
+  b::after{
+    content:"";
+    width:50px;
+    height:17px;
+    background:teal;
+    display:block;
+    animation:forward 5s infinite;
+    transition:5s;
+  }
+  @keyframes forward{
+    10%{
+      width:10%
+    }
+    20%{
+      width:20%;
+    }
+    30%{
+      width:30%;
+    }
+    40%{
+      width:40%
+    }
+    50%{
+      width:50%;
+    }
+    60%{
+      width:60%;
+    }
+    70%{
+      width:70%
+    }
+    80%{
+      width:80%;
+    }
+    90%{
+      width:90%;
+    }
+    100%{
+      width:100%;
+    }
+  }
+  .btn{
+    display:block;
+    margin:0px auto;
+    text-align:center;
+  }
+  #btn2{
+    background:red;
+    font-style:italic;
+  }
+  span{
+    width:50x;
+    height:50px;
+    /*background:green;*/
+    color:#fff;
+    padding: 4px 9px;
+    border-radius:100%;
+    text-align:center;
+    font-family:cursive;
+    font-weight:bolde;
+    font-size: 0.9em;
+    color:violet;
+  }
+  </style>
+</head>
+<body>
+  <p>0</p>
+  <b>vos bonus pour avoir joué : <span>0</span></b>
+  <h1>0</h1>
+  <div class="btn">
+  <button>ajouter</button>
+  <button id="btn2">effacer</button>
+  </div>
+  <div id="div">
+    <p class="js">animation css</p>
+  </div>
+  <
+  <script>
+  var i  = 1;
+  var point = Math.floor(Math.random()*6)+1;
+  var bnus = document.querySelector("span");
+  var date = new Date();
+  var nd = 0;
+  
+  let btn2 = document.getElementById("btn2");
+  btn2.onclick = ()=>{
+    h.innerText = 0;
+    i = 1;
+    bnus.innerText = 0;
+  }
+  let h = document.querySelector("h1");
+  let b = document.querySelector("button");
+  b.onclick =  ()=>{
+    var pc = h.innerText =i++;
+    if(i == 11){
+      bnus.innerText = point;
+    }
+  };
+   //var p = document.querySelector("p");
+  var id = setInterval(function(){  
+    nd += 1;
+    document.querySelector("p").innerText = nd;
+  },0);
+  </script>
+</body>
+</html>
